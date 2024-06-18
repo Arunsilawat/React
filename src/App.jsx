@@ -4,6 +4,12 @@ import Header from "./Header";
 import Middle from "./Middle";
 import Footer from "./Footer";
 
+import Header1 from "./Header1";
+import Data from "./Data";
+import Footer1 from "./Footer1";
+
+
+
 // react comoments----------------------------
 // const App=()=>{
 //   return(
@@ -51,12 +57,28 @@ import Footer from "./Footer";
 //------------------------------------------------------------
  
  
+// const App=()=>{
+//   return(
+//     <>
+//     <h1>Application from</h1>
+//     Enter Name: <input type="text" />
+//     <br />
+//     Enter City: <input type="text" />
+//     </>
+//   )
+// }
+// export default App;
+//----------------------------------------------------------------
+//========================co
+  
 const App=()=>{
   return(
     <>
-    <h1>i am arun</h1>
-    <h1>from Bhopal</h1>
+     <Header1/>
+     <Data/>
+     <Footer1/>
     </>
+  
   )
 }
 export default App;
