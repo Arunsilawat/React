@@ -1,16 +1,13 @@
 
-import Cybrom from "./Cybrom";
 import Header from "./Header";
-import Middle from "./Middle";
 import Footer from "./Footer";
-
-import Header1 from "./Header1";
 import Data from "./Data";
-import Footer1 from "./Footer1";
+import Employee from "./Employee";
+import Collage from "./Collage";
 
 
 
-// react comoments----------------------------
+// react components----------------------------
 // const App=()=>{
 //   return(
 //     <>
@@ -69,14 +66,40 @@ import Footer1 from "./Footer1";
 // }
 // export default App;
 //----------------------------------------------------------------
-//========================co
+//========================component==============================
   
+// const App=()=>{
+//   return(
+//     <>
+//      <Header/>
+//      <Data/>
+//      <Footer/>
+//     </>
+  
+//   )
+// }
+// export default App;
+
+//----------------employeeeee-------------
+// const App=()=>{
+//   return(
+//     <>
+//      <Employee nm="Arun" num="E233" sal="60000"/>
+//     </>
+  
+//   )
+// }
+// export default App;
+//---------------collage--------------
+
+const nm="Sachin";
+const clg="Mtech";
+const fees=30000;
+
 const App=()=>{
   return(
     <>
-     <Header1/>
-     <Data/>
-     <Footer1/>
+     <Collage nm={nm} clg={clg} fee={fees}/>
     </>
   
   )
