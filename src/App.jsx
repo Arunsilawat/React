@@ -1,5 +1,5 @@
 import Collage from "./Collage"
-import student from "./Student"
+import Student from "./Student"
 
 // import Employee from "./Employee"
 
@@ -69,11 +69,12 @@ import student from "./Student"
 // // }
 // export default App;
 
-const ans=student.map((key)=>{<Collage nm={key.name} roll={key.rollno} ct={key.city} fee={key.fees}/>})
+const ans=Student.map((key)=><Collage nm={key.name} roll={key.rollno} ct={key.city} fee={key.fees}/>);
 const App=()=>{
     return(
       <>
-      <table>
+      <h1>kkjkjhkjhkjhkjhkj</h1>
+      <table border="1">
         <tr>
           <th>Name</th>
           <th>Roll no</th>
@@ -85,3 +86,5 @@ const App=()=>{
       </>
     )
 }
+
+export default App;

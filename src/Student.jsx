@@ -1,6 +1,6 @@
 
 
-const student=[
+const Student=[
     {
         "name":"Arun Silawat",
         "rollno":101,
@@ -62,4 +62,4 @@ const student=[
         "fees":10000
     }
 ]
-export default student;
+export default Student;
