@@ -1,90 +1,23 @@
-import Collage from "./Collage"
-import Student from "./Student"
+import Stu from "./Stu";
+import Cybrom from "./Cybrom";
 
-// import Employee from "./Employee"
 
-// const student=[
-//   {
-//     "rollno":120,
-//     "name":"Arun",
-//     "city":"Bhopal"
-//   },
-//   {
-//     "rollno":121,
-//     "name":"Rahul",
-//     "city":"Betul"
-//   },
-//   {
-//     "rollno":122,
-//     "name":"jalaj",
-//     "city":"hoshangabad"
-//   },
-//   {
-//     "rollno":123,
-//     "name":"subham",
-//     "city":"Indore"
-//   }
-// ]
+const ans=Stu.map((key)=><Cybrom nm={key.name} roll={key.rollno} ct={key.city} fee={key.fees}/>)
 
-// const ans=student.map((key)=>{
-//   return(
-//     <>
-//     <tr>
-//       <td>{key.rollno}</td>
-//       <td>{key.name}</td>
-//       <td>{key.city}</td>
-//     </tr>
-//     </>
-//   )
-// })
-
-// //---------------------------------------
-// const ans1=Employee.map((key)=>{
-//   return(
-//     <>
-//     <tr>
-//       <td>{key.empno}</td>
-//       <td>{key.name}</td>
-//       <td>{key.salary}</td>
-//       <td>{key.city}</td>
-//     </tr>
-//     </>
-//   )
-// })
-// // const App=()=>{
-// return(
-// <>
-// <table border="1" width="500" bgcolor="pink" align="center">
-//   <tr bgcolor="orange">
-//     <td>Emp num</td>
-//     <td>Name</td>
-//     <td>Salary</td>
-//     <td>City</td>
-//   </tr>
-//   {ans1}
-// </table>
-
-// </>
-// )
-// // }
-// export default App;
-
-const ans=Student.map((key)=><Collage nm={key.name} roll={key.rollno} ct={key.city} fee={key.fees}/>);
 const App=()=>{
-    return(
-      <>
-      <h1>kkjkjhkjhkjhkjhkj</h1>
-      <table border="1">
-        <tr>
-          <th>Name</th>
-          <th>Roll no</th>
-          <th>City</th>
-          <th>Fees</th>
-        </tr>
-        {ans}
-      </table>
-      </>
-    )
+  return(
+    <>
+    <table bgcolor="yellow" border="1" align="center" width="900" height="200">
+      <tr bgcolor="pink">
+        <th>Name</th>
+        <th>Roll number</th>
+        <th>City</th>
+        <th>Fees</th>
+      </tr>
+      {ans}
+    </table>
+    </>
+  )
 }
 
 export default App;
