@@ -1,15 +1,12 @@
 
-
-const Collage=(props)=>{
+import Cybrom from "./Cybrom";
+const Collage=()=>{
     return(
-        <>
-        <tr>
-         <td>{props.nm}</td>
-         <td>{props.roll}</td>
-         <td>{props.ct}</td>
-         <td>{props.fee}</td>   
-        </tr>        
-        </>
+      <>
+      <h1 className="head1">I am fullstack student</h1>
+      <Cybrom/>
+      </>
     )
-}
-export default Collage;
+  
+  }
+  export default Collage;

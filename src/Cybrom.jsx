@@ -1,16 +1,11 @@
 
 
-const Cybrom=(props)=>{
-    return(
-        <>
-        <tr>
-            <td>{props.nm}</td>
-            <td>{props.roll}</td>
-            <td>{props.ct}</td>
-            <td>{props.fee}</td>
-        </tr>
-        </>
-    )
-}
+const Cybrom=()=>{
+  return(
+    <>
+    <h1 id="head2">I am from Bhopal</h1>
+    </>
+  )
 
+}
 export default Cybrom;
