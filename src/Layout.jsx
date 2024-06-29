@@ -6,12 +6,12 @@ const Layout=()=>{
       <>
        <Link to="home">Home</Link>
        <Link to="about">About Us</Link>
-       <Link to="contant">Contant</Link>
-
-       <hr size="3" color="red"/>
+       <Link to="service">Service</Link>
+       <Link to="contact">Contact Us</Link>
+       <hr size="4" color="red"/>
        <Outlet/>
-       <hr size="3" color="red"/>
-       www.mycompny.com 2024
+       <hr size="4" color="red"/>
+         www.mycompny.com 2024
       </>
     )
   }

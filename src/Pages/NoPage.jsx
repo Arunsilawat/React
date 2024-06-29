@@ -10,7 +10,7 @@
 const NoPage=()=>{
     return(
         <>
-         <h1>404 No page fount</h1>
+         <h1>error: 404 page not fount</h1>
         </>
     )
 }
