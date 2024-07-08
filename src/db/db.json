@@ -1,0 +1,41 @@
+{
+    "student":[
+
+        {
+            "rollno":121,
+            "name":"arun",
+            "city":"bhopal",
+            "fees":23223
+        },
+        {
+            "rollno":122,
+            "name":"rahul",
+            "city":"Indore",
+            "fees":23223
+        },
+        {
+            "rollno":123,
+            "name":"raj",
+            "city":"betul",
+            "fees":23223
+        },
+        {
+            "rollno":121,
+            "name":"arun",
+            "city":"bhopal",
+            "fees":23223
+        },
+        {
+            "rollno":121,
+            "name":"arun",
+            "city":"bhopal",
+            "fees":23223
+        },
+        {
+            "rollno":121,
+            "name":"arun",
+            "city":"bhopal",
+            "fees":23223
+        }
+    ]
+}
