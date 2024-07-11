@@ -1,65 +1,50 @@
-import Button from 'react-bootstrap/Button';
+
+import { useState } from "react";
+import axios from "axios";
 import Form from 'react-bootstrap/Form';
-import { useState } from 'react';
-import axios from 'axios';
+import Button from 'react-bootstrap/Button';
 
 const Insert=()=>{
+ 
+  const [myinput,setMyinput]=useState({});
+  const handalInput=(e)=>{
+       let name=e.target.name
+       let value=e.target.value
+       setMyinput(values=>({...values,[name]:value}))
+  }
+  const  InputSubmit=()=>{
+         let url="http://localhost:3000/cybrom"
+         axios.post(url,myinput).then((res)=>{
+              alert("Posted")
+         }).catch((err)=>{
+             alert("Error")
+         })
+  }
 
-const [input, setInput]= useState({})
-
-
-
-const handleInput=(e)=>{
-    let name= e.target.name;
-    let value=e.target.value;
-    setInput(values=>({...values, [name]:value}));
-    console.log(input);
-
-}
-
-
-const handleSubmit=(e)=>{
-    e.preventDefault();
-    let url="http://localhost:3000/cybrom";
-
-   axios.post(url, input).then((res)=>{
-    alert("Data succesfully submited!!!");
-   }).catch((err)=>{
-    console.log("Error in Inserting!!")
-   });
-
-}
-
-    return(
-        <>
-        <div className='divcenter'>
-          <h1> Insert Students Record</h1>
-
-          <Form>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Rollno</Form.Label>
-        <Form.Control type="text" name="rollno" value={input.rollno}   onChange={handleInput} placeholder="Enter rollno" />
+  return(
+    <>
+    <h1>Insert Data</h1>
+    
+      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+        <Form.Label>Roll No</Form.Label>
+        <Form.Control type="text" name="rollno" value={myinput.rollno} onChange={handalInput} placeholder="Enter Roll No" />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
+      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
         <Form.Label>Name</Form.Label>
-        <Form.Control type="text" name="name" value={input.name}  onChange={handleInput} placeholder="Enter name" />
+        <Form.Control type="text" name="name" value={myinput.name} onChange={handalInput} placeholder="Enter Name" />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
+      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
         <Form.Label>City</Form.Label>
-        <Form.Control type="text" name="city" value={input.city}  onChange={handleInput} placeholder="Enter city" />
+        <Form.Control type="text" name="city" value={myinput.city} onChange={handalInput}  placeholder="Enter City" />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Fees </Form.Label>
-        <Form.Control type="text" name="fees" value={input.fees}  onChange={handleInput} placeholder="Enter fees" />
+      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+        <Form.Label>Fees</Form.Label>
+        <Form.Control type="text" name="fees" value={myinput.fees} onChange={handalInput} placeholder="Enter Fees" />
       </Form.Group>
-      <Button variant="primary" type="submit" onClick={handleSubmit}>
-        Submit
-      </Button>
-    </Form>
-    </div>
-        </>
-    )
+      <Button variant="primary" onClick={InputSubmit} >Submit</Button>
+    
+    </>
+  )
 }
 
-
-export default Insert;
+export default Insert ;
