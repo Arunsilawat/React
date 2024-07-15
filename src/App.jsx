@@ -5,6 +5,7 @@ import Display from "./Pages/Display";
 import Contact from "./Pages/Contact";
 import Insert from "./Pages/Insert";
 import Search from "./Pages/Search";
+import Update from "./Pages/Update";
 
 
 
@@ -20,6 +21,7 @@ const App=()=>{
                 <Route path="/contact" element={<Contact/>} />
                 <Route path="/insert" element={<Insert/>} />
                 <Route path="/search" element={<Search/>} />
+                <Route path="/update" element={<Update/>}/>
                </Route>
            </Routes>
         </BrowserRouter>

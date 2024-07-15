@@ -11,7 +11,7 @@ const Search = () => {
     axios.get(url).then((res) => {
       setMydata(res.data)
     })
-  }
+  }  
   let ans = mydata.map((key) => {
     return (
       <>
