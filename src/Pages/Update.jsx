@@ -34,9 +34,8 @@ const Update = () => {
      const handleInput=(e)=>{
       let name=e.target.name;
       let value=e.target.value;
-      setEditdata(values=>({...values,[name]:value}));
+      setEditdata(values=>({...values,[name]:value}))
      }
-     
      const handlesubmit=()=>{
       let url=`http://localhost:3000/cybrom/${Editdata.id}`
       axios.put(url.Editdata).then(()=>{
