@@ -30,11 +30,28 @@
 // }
 // export default App;
 // ========================================end=========================================================
+import { useState } from "react";
 import Collage from "./Collage";
+
 const App=()=>{
+    const [mydata,setMydata]=useState("")
+    setTimeout(()=>{
+     setMydata(true)
+    },3000)
+// --------------------------------------------------
+const subjects=["Java","Python","C++","Java script","Git","Html"]
     return(
         <>
-        <Collage myVal={false}/>
+        <Collage myVal={mydata}/>
+{/* ---------------------------------------------------- */}
+         {subjects.length>0 && 
+         subjects.map((key)=>{
+             return(
+                <>
+                <li>{key}</li>
+                </>
+             )
+         })}
         </>
     )
 }
