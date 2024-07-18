@@ -7,6 +7,7 @@ import eding from "../images/update1.jpg"
 const Update = () => {
     const [mydata, setMydata] = useState([])
     const [Editdata,setEditdata]=useState({})
+
     const handledata = () => {
         let url = "http://localhost:3000/cybrom"
         axios.get(url).then((res) => {
@@ -27,7 +28,7 @@ const Update = () => {
         let url=`http://localhost:3000/cybrom/${myid}`
         axios.get(url).then((res)=>{
             setEditdata(res.data)
-            console.log(res.data)
+            console.log("helooo",res.data)
         });
      }
 
@@ -38,9 +39,9 @@ const Update = () => {
      }
      const handlesubmit=()=>{
       let url=`http://localhost:3000/cybrom/${Editdata.id}`
-      axios.put(url.Editdata).then(()=>{
+      axios.put(url,Editdata).then(()=>{
         alert("Successfully Updated !!")
-        handledata()
+        handledata();
       })
      }
 
@@ -53,10 +54,10 @@ const Update = () => {
                     <td>{key.city}</td>
                     <td>{key.fees}</td>
                     <th>
-                    <a href="">
+                    <a href="#">
                        <img src={eding} alt="" width={35}  onClick={()=>{myEd(key.id)}}/>
                         </a>                        
-                       <a href="">
+                       <a href="#">
                        <img src={deling} alt="" width={40} onClick={()=>{mydel(key.id)}} />
                         </a>                        
                     </th>
@@ -81,15 +82,15 @@ const Update = () => {
                     {ans}
                 </tbody>
                 <br />
-                <input type="hidden" name="recid" value={myEd.id} />
+                <input type="hidden" name="recid" value={Editdata.id} />
                 <br />
-                Enter Roll No: <input type="text" name="rollno" value={myEd.rollno} onChange={handleInput} />
+                Enter Roll No: <input type="text" name="rollno" value={Editdata.rollno} onChange={handleInput} />
                 <br />
-                Enter Name: <input type="text" name="name" value={myEd.name} onChange={handleInput} />
+                Enter Name: <input type="text" name="name" value={Editdata.name} onChange={handleInput} />
                 <br />
-                Enter City: <input type="text" name="city" value={myEd.city} onChange={handleInput} />
+                Enter City: <input type="text" name="city" value={Editdata.city} onChange={handleInput} />
                 <br />
-                Enter Fees: <input type="text" name="fees" value={myEd.fees} onChange={handleInput} />
+                Enter Fees: <input type="text" name="fees" value={Editdata.fees} onChange={handleInput} />
                 <br />
                 <button onClick={handlesubmit}>Update Data</button>
             </Table>

@@ -22,18 +22,11 @@
       "fees": 89099
     },
     {
-      "id": "35ae",
+      "id": "e712",
       "rollno": "124",
-      "name": "Muskan",
-      "city": "sehore",
-      "fees": "4900099"
-    },
-    {
-      "id": "45cc",
-      "rollno": "125",
-      "name": "Rajesh",
-      "city": "Mumbai",
-      "fees": "7997"
+      "name": "rohan",
+      "city": "Indore",
+      "fees": "890099"
     }
   ]
 }
