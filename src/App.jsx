@@ -90,3 +90,15 @@
 // export default App;
 
 //------------------------------------------------------------------------------------
+import Comp1 from "./Props Deling/Comp1";
+import { useState } from "react";
+const App=()=>{
+    const [user, setUser]=useState("ARUN")
+    return(
+        <>
+        <h1>WelCome {user} </h1>
+         <Comp1 user={user} />
+        </>
+    )
+}
+export default App;
