@@ -7,6 +7,8 @@
 // import Search from "./Pages/Search";
 // import Update from "./Pages/Update";
 
+import { useState } from "react";
+
 
 
 // const App=()=>{
@@ -90,15 +92,19 @@
 // export default App;
 
 //------------------------------------------------------------------------------------
-import Comp1 from "./Props Deling/Comp1";
-import { useState } from "react";
+import { createContext } from "react";
+import Cybrom from "./Cybrom";
+const courseContext=createContext();
 const App=()=>{
-    const [user, setUser]=useState("ARUN")
+    const [course,setCourse]=useState("Java")
     return(
         <>
-        <h1>WelCome {user} </h1>
-         <Comp1 user={user} />
+        <button onClick={()=>{setCourse("Python")}}>Click Here !!</button>
+        <courseContext.Provider value={{course,setCourse}}>
+         <Cybrom/>
+        </courseContext.Provider>
         </>
     )
 }
 export default App;
+export {courseContext};
