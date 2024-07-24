@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './CSS/style.css'
-import LoginContext from './LoginContext.jsx';
+import LoginContext from './Login Logout/LoginContext.jsx';
 ReactDOM.createRoot(document.getElementById('root')).render(
     <LoginContext>
      <App/>
