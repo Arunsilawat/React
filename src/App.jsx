@@ -1,17 +1,14 @@
 import { useContext } from "react";
-import { myColorContaxt } from "./ColorContaxt";
-import { useState } from "react";
+import { myLoginContext } from "./LoginContext";
+import UnauthUser from "./UnauthUser";
+import AuthUser from "./AuthUser";
 const App=()=>{
-    const {color,setColor}=useContext(myColorContaxt)
-    const [txt,setText]=useState("")
+    const {user}=useContext(myLoginContext)
     return(
         <>
-        <h1>Hello App</h1>
-        Enter Color: <input type="text" value={txt} onChange={(e)=>{setText(e.target.value)}} />
-        <button onClick={()=>{setColor(txt)}}>Change</button><br /><br />
-        <div style={{width:400,border:'2px solid black',height:200,backgroundColor:color}}>
-
-        </div>
+        <h1>My Login App</h1>
+       
+         {user.auth ?  <AuthUser/> : <UnauthUser/>}
         </>
     )
 }
