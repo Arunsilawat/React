@@ -1,14 +1,23 @@
-import { useContext } from "react";
-import { myLoginContext } from "./Login Logout/LoginContext";
-import UnauthUser from "./Login Logout/UnauthUser";
-import AuthUser from "./Login Logout/AuthUser";
+import Layout from "./Layout";
+import Home from "./Home";
+import Login from "./Login";
+import Registration from "./Registration";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+
 const App=()=>{
-    const {user}=useContext(myLoginContext)
     return(
-        <>
-        <h1>My Login App</h1>
-       
-         {user.auth ?  <AuthUser/> : <UnauthUser/>}
+        <> 
+         <BrowserRouter>
+            <Routes>
+                <Route path="/" element={ <Layout/>}> 
+                 <Route index  element={ <Home/>}/>
+                 <Route path="/home" element={ <Home/>}/>
+                 <Route path="/registration" element={ <Registration/>}/>
+                 <Route path="/login" element={ <Login/>}/>
+                </Route>
+            </Routes>
+         </BrowserRouter>
         </>
     )
 }

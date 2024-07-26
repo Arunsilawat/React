@@ -1,32 +1,20 @@
 {
-  "cybrom": [
+  "ragesrer": [
     {
       "id": "1",
-      "rollno": 121,
+      "userid": 121,
       "name": "Arun",
-      "city": "Bhopal",
-      "fees": 59000
+      "email": "arunsilawat@gmail.com",
+      "pass": "s123",
+      "repass": "s123"
     },
     {
-      "id": "2",
-      "rollno": 122,
+      "id": "3036",
+      "userid": "111",
       "name": "Ritu",
-      "city": "Pipariya",
-      "fees": 34900
-    },
-    {
-      "id": "3",
-      "rollno": 123,
-      "name": "Payal",
-      "city": "Indore",
-      "fees": 89099
-    },
-    {
-      "id": "e712",
-      "rollno": "124",
-      "name": "rohan",
-      "city": "Indore",
-      "fees": "890099"
+      "email": "ritu123@gmail.com",
+      "pass": "r123",
+      "repass": "r123"
     }
   ]
 }
