@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './CSS/style.css'
-import UserContaxt from './Login Logout/UserContaxt.jsx';
+import './CSS/Arun.css'
+import Store from './Increment Dic With Tools/Store.jsx';
+import { Provider } from 'react-redux';
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <UserContaxt>
-     <App/>
-    </UserContaxt>
+     <Provider store={Store}>
+        <App/>
+     </Provider>
+   
 )
 
  
