@@ -7,4 +7,4 @@ import { configureStore } from "@reduxjs/toolkit";
         mycounter:myans
     }
  })
- export default Store;
+//  export default Store;
