@@ -1,8 +1,27 @@
- const App=()=>{
-    
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Layout from "./Layout";
+import Home from "./Pages/Home";
+import Display from "./Pages/Display";
+import Insert from "./Pages/Insert";
+import Search from "./Pages/Search";
+import Update from "./Pages/Update";
+
+const App=()=>{
     return(
         <>
-        <h1>Welcome</h1>
+        <BrowserRouter>
+             <Routes>
+                <Route path="/" element={ <Layout/>}>
+                 <Route index element={<Home/>}/>
+                 <Route path="/home" element={<Home/>}/>
+                 <Route path="/display" element={<Display/>}/>
+                 <Route path="/insert" element={<Insert/>}/>
+                 <Route path="/search" element={<Search/>}/>
+                 <Route path="/update" element={<Update/>}/>
+                </Route>
+             </Routes>
+        </BrowserRouter>
+       
         </>
     )
 }
