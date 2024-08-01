@@ -1,22 +1,6 @@
 {
   "ragesrer": [
     {
-      "id": "1",
-      "userid": 121,
-      "name": "Arun",
-      "email": "arunsilawat@gmail.com",
-      "pass": "s123",
-      "repass": "s123"
-    },
-    {
-      "id": "2",
-      "userid": "111",
-      "name": "Ritu",
-      "email": "ritu123@gmail.com",
-      "pass": "r123",
-      "repass": "r123"
-    },
-    {
       "id": "3",
       "userid": 121,
       "name": "Arun",
@@ -57,20 +41,12 @@
       "repass": "9098"
     },
     {
-      "id": "40cb",
-      "userid": "1111",
-      "name": "subham",
-      "email": "subham@gmail.com",
-      "pass": "9098",
-      "repass": "9098"
-    },
-    {
-      "id": "7fc8",
-      "userid": "1221",
-      "name": "Som",
-      "email": "som@gmail.com",
-      "pass": "s123",
-      "repass": "s123"
+      "id": "34b4",
+      "userid": "1212",
+      "name": "Subhani",
+      "email": "suhani@gmail.com",
+      "pass": "s1234",
+      "repass": "1233"
     }
   ]
 }
