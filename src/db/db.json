@@ -31,22 +31,6 @@
       "email": "ritu123@gmail.com",
       "pass": "r123",
       "repass": "r123"
-    },
-    {
-      "id": "1abb",
-      "userid": "1111",
-      "name": "subham",
-      "email": "subham@gmail.com",
-      "pass": "9098",
-      "repass": "9098"
-    },
-    {
-      "id": "34b4",
-      "userid": "1212",
-      "name": "Subhani",
-      "email": "suhani@gmail.com",
-      "pass": "s1234",
-      "repass": "1233"
     }
   ]
 }
