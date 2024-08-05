@@ -7,10 +7,10 @@ import './CSS/Arun.css'
 import Store from './Store.jsx';
 import { Provider } from 'react-redux';
   ReactDOM.createRoot(document.getElementById('root')).render( 
-<Provider store={Store}>
+
+ <Provider store={Store}>
 <App/>
-</Provider>
- 
+ </Provider>
  )
 
  
