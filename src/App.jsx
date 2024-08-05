@@ -12,8 +12,8 @@ const App=()=>{
    const deleteTask=(id)=>{
       mydic(deltask(id))
    }
-   const complatetask=(myid)=>{
-      mydic(comptask(myid))
+   const taskcom=(id)=>{
+      mydic(comptask(id))
    }
    let sno=0;
    const ans=mydata.map((key)=>{
@@ -22,13 +22,14 @@ const App=()=>{
             <>
             <tr>
                <td>{sno}</td>
-               <td>{key.task}</td>
+               <td>
+                  {key.complate ? <span style={{textDecoration:"line-through",color:'red'}}>{key.task}</span>:key.task}
+               </td>
                <th>
                   <button onClick={()=>{deleteTask(key.id)}} >Delete</button>
                </th>
                <td>
-                  {key.complate ? <span>{key.task}</span> }
-                  <button  onClick={()=>{complatetask(key.id)}}>Complate</button>
+                  <button onClick={()=>{taskcom(key.id)}}>Complate</button>
                </td>
             </tr>
             </>
