@@ -1,13 +1,11 @@
-import { BrowserRouter,Routes,Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./Layout";
 import Home from "./Pages/Home";
-import Shop from "./Pages/Shop";
-import Blog from "./Pages/Blog";
-import Contact from "./Pages/Contact";
-import About from "./Pages/About";
-import CartProduct from "./Pages/CartProduct";
- 
- const App=()=>{
+import Display from "./Pages/Display";
+import Insert from "./Pages/Insert";
+import Update from "./Pages/Update";
+
+const App=()=>{
    return(
       <>
       <BrowserRouter>
@@ -15,15 +13,12 @@ import CartProduct from "./Pages/CartProduct";
          <Route path="/" element={<Layout/>}>
          <Route index element={<Home/>}/>
          <Route path="home" element={<Home/>}/>
-         <Route path="shop" element={<Shop/>}/>
-         <Route path="blog" element={<Blog/>}/>
-         <Route path="contact" element={<Contact/>}/>
-         <Route path="about" element={<About/>}/>
-         <Route path="cartproduct" element={<CartProduct/>}/>
+         <Route path="display" element={<Display/>}/>
+         <Route path="insert" element={<Insert/>}/>
+         <Route path="update" element={<Update/>}/>
          </Route>
       </Routes>
       </BrowserRouter>
-      
       </>
    )
 }

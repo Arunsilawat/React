@@ -1,45 +1,41 @@
+import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { FaShoppingCart } from "react-icons/fa";
-import { FaHeart } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import logo from "../images/logo.png"
-import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-const NavbarComp = () => {
-    const mycart=useSelector((state)=>state.mycart.cart);
-    let datalength=mycart.length
-    const navigate=useNavigate()
+
+const Top = () => {
     return (
         <>
-            <Navbar expand="lg" className="bg-body-tertiary" style={{position:'sticky',top:'0',zIndex:'1'}}>
-                <Container fluid >
-                <Navbar.Brand href="#" ><img src={logo} alt="" style={{width:'150px'}} /></Navbar.Brand>
-                
-                    <Navbar.Collapse id="navbarScroll" > 
+            <Navbar expand="lg" className="bg-body-tertiary">
+                <Container fluid>
+                    <Navbar.Brand href="#" style={{fontWeight:'bold'}}>CRUD</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="navbarScroll" />
+                    <Navbar.Collapse id="navbarScroll">
                         <Nav
                             className="me-auto my-2 my-lg-0"
-                            style={{ maxHeight: '100px',margin:"auto",fontWeight:'bold',fontSize:'19px'}}
+                            style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <Nav.Link as={Link} to="home">Home</Nav.Link>
-                            <Nav.Link as={Link} to="shop">Shop</Nav.Link>
-                            <Nav.Link as={Link} to="blog">Blog</Nav.Link>
-                            <Nav.Link as={Link} to="contact">Contact Us</Nav.Link> 
-                            <Nav.Link as={Link} to="about">About Us</Nav.Link>
+                            <Nav.Link as={Link} to="home" style={{fontWeight:'bold'}}>Home</Nav.Link>
+                            <Nav.Link as={Link} to="display" style={{fontWeight:'bold'}}>Display</Nav.Link>
+                            <Nav.Link as={Link} to="insert" style={{fontWeight:'bold'}}>Insert</Nav.Link>
+                            <Nav.Link as={Link} to="update" style={{fontWeight:'bold'}}>Update</Nav.Link>
                         </Nav>
-                        <Form className="d-flex" >
-                            <FaShoppingCart style={{fontSize:"20px",margin:'8px'}} onClick={()=>{navigate("/cartproduct")}} /> 
-                            
-                            {datalength>=1? <span id="tokri"> {datalength} </span>: ""}
-                            <FaHeart style={{fontSize:"20px",margin:'8px'}} />
-                         </Form>
+                        <Form className="d-flex">
+                            <Form.Control
+                                type="search"
+                                placeholder="Search"
+                                className="me-2"
+                                aria-label="Search"
+                            />
+                            <Button variant="outline-success">Search</Button>
+                        </Form>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
         </>
     )
 }
-export default NavbarComp;
+export default Top;
