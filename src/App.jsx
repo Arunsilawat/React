@@ -4,7 +4,6 @@ import Home from "./Pages/Home";
 import Display from "./Pages/Display";
 import Insert from "./Pages/Insert";
 import Update from "./Pages/Update";
-
 const App=()=>{
    return(
       <>
