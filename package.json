@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@coreui/react-chartjs": "^3.0.0",
+    "@mui/x-charts": "^7.15.0",
     "@reduxjs/toolkit": "^2.2.6",
     "antd": "^5.19.2",
     "axios": "^1.7.2",
