@@ -1,50 +1,18 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import Table from 'react-bootstrap/Table';
-const App = () => {
-    const [mydata, setmydata] = useState([]);
-    const datahandle = () => {
-        let api = 'http://localhost:3000/student';
-        axios.get(api).then((res) => {
-            setmydata(res.data)
-        })
-    }
-    useEffect(() => {
-        datahandle();
-    }, [])
-    let sum=0;
-    const ans = mydata.map((key) => {
-        sum+=1
-        return (
-            <>
-                <tr>
-                    <td>{sum}</td>
-                    <td>{key.name}</td>
-                    <td>{key.age}</td>
-                    <td>{key.city}</td>
-                    <td>{key.class}</td>
-                </tr>
-            </>
-        )
-    })
-    return (
-        <>
-            <h1>Welcome to Cybrom</h1>
-            <Table striped bordered hover>
-                <thead>
-                    <tr>
-                        <th>S No</th>
-                        <th>Name</th>
-                        <th>Age</th>
-                        <th>City</th>
-                        <th>Class</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {ans}
-                </tbody>
-               </Table>
-            </>
-            )
+
+import { useDispatch,useSelector } from "react-redux";
+import { useState } from "react";
+import { changecolor } from "./ColorSlice";
+const App=()=>{
+   const result=useSelector((state)=>state.mycolor.bgcolor);
+   const mydic=useDispatch();
+   const [clr,setMyclr]=useState("");
+   return(
+      <>
+      <h1>App</h1>
+      Enter Color : <input type="text" onChange={(e)=>{setMyclr(e.target.value)}} />
+      <button onClick={()=>{mydic(changecolor(clr))}}>Change</button>
+      <div style={{width:"400px",height:"300px",backgroundColor:result}}></div>
+      </>
+   )
 }
-            export default App;
+export default App;
