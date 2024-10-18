@@ -9,7 +9,5 @@ import Store from './Store';
     <Provider store={Store}>
    <App />
     </Provider>
-        
-    
  )
 

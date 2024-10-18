@@ -1,18 +1,17 @@
 
-import { useDispatch,useSelector } from "react-redux";
-import { changecolor } from "./ColorSlice";
-import { useState } from "react";
+
+import { useSelector,useDispatch } from "react-redux";
+import { increment,dicrement } from "./CounterSlice";
+
 const App=()=>{
-   const result=useSelector((state)=>state.mycolor.bgcolor)
+   const result=useSelector((state)=>state.mycounter.cnt)
    const mydic=useDispatch();
-   const [txt,setMytxt]=useState("")
    return(
       <>
-        
-        <div style={{width:'400px',height:'300px',border:'2px solid black',backgroundColor:result}}>
-        </div><br />
-        <input type="text" onChange={(e)=>{setMytxt(e.target.value)}} />
-         <button onClick={()=>{mydic(changecolor(txt))}}>Change Color</button>
+      <h1>..... Counter .....</h1>
+      <h1>{result}</h1>
+      <button onClick={()=>{mydic(increment())}}>Increment</button>
+      <button onClick={()=>{mydic(dicrement())}}>Dicrement</button>
       </>
    )
 }
