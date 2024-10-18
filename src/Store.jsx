@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import mycount from "./CounterSlice"
+import todo from "./TodoSlice"
 const Store=configureStore({
     reducer:{
-      mycounter:mycount
+       mytodo:todo
     }
 })
 export default Store;
