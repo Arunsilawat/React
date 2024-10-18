@@ -1,11 +1,9 @@
 
 
-.maindiv{
-    width: 100%;
 
-}
-.footer{
-    width: 100%;
-    height: 300;
-    background-color: blue;
-}
+.box{
+    border: 2px solid black;
+    width: 350px;
+    height: 250px;
+    margin: auto;
+ }
