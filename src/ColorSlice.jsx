@@ -1,9 +1,10 @@
+
 import { createSlice } from "@reduxjs/toolkit";
 
 const ColorSlice=createSlice({
     name:"mycolor",
     initialState:{
-        bgcolor:"red"
+        bgcolor:"yellow"
     },
     reducers:{
         changecolor:(state,actions)=>{
